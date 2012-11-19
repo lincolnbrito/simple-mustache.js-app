@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Mustache.js + jQuery</title>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<style type="text/css">
+		#location_tabs{
+			border: 1px solid black;
+		}
+		#listItem_location{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="location_tabs">
+		<ul id="list_locations">
+			{{#locations}}
+				<li class="listItem_location">
+					{{label}}
+				</li>
+			{{/locations}}	
+		</ul>
+	</div>
+</body>
+</html>
